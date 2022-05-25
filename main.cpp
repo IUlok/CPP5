@@ -1,7 +1,8 @@
-#include "CTriangle.h"
-#include "CPolygon.h"
-#include "CQuad.h"
 #include <iostream>
+#include <math.h>
+#include "CTriangle.h"
+#include "CPolygon.cpp"
+#include "CQuad.h"
 using namespace std;
 int main() {
     CQuad u1(0, 0, 3, 0, 3, 3, 0, 3);

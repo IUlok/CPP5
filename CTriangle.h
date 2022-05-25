@@ -1,8 +1,6 @@
-//#pragma once
 #include <iostream>
-#include "CPolygon.h"
-#include <conio.h>
-#include <cmath>
+#include <math.h>
+#include "CPolygon.cpp"
 using namespace std;
 class CTriangle:public CPolygon
 {
