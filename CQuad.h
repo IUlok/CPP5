@@ -1,16 +1,19 @@
+#pragma once
 #include <iostream>
-#include <math.h>
-#include "CPolygon.cpp"
+#include "CPolygon.h"
+#include <conio.h>
+#include <iostream>
+#include <cmath>
 using namespace std;
 class CQuad:public CPolygon
 {
 public:
-    CQuad():CPolygon() {};//конструктор
+    CQuad():CPolygon() {};// Конструктор производного класса
     CQuad(int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4) : CPolygon(x1, y1, x2, y2, x3, y3, x4, y4) {}//конструктор спараметрами
     ~CQuad()
     {
         cout << "The object is destroyed" << endl;
-    };//деструктор
+    };// Деструктор
     double findPerimetr();
     void showCharacteristics();
     int NewCoordinates();
@@ -50,4 +53,4 @@ int CQuad::NewCoordinates(){
     this->m_y3 = m_y3;
     this-> m_x4 = m_x4;
     this-> m_y4 = m_y4;
-}
+} // Все то же самое, что и для треугольника, но на одну точку больше

@@ -1,13 +1,12 @@
-#include <iostream>
-#include <math.h>
 #include "CTriangle.h"
-#include "CPolygon.cpp"
+#include "CPolygon.h"
 #include "CQuad.h"
+#include <iostream>
 using namespace std;
 int main() {
-    CQuad u1(0, 0, 3, 0, 3, 3, 0, 3);
+    CQuad u1(0, 0, 3, 0, 3, 3, 0, 3); // Создание объектов классов
     CTriangle u2(0, 0, 0, 3, 4, 0);
-    CPolygon *u;
+    CPolygon *u; // Указатель на базовый класс
     int exit = 0;
     while (exit != 4) {
         cout << "----------------------\n";
@@ -24,8 +23,8 @@ int main() {
                 cin >> exit;
                 switch (exit) {
                     case 1:
-                        u = &u1;
-                        u->showCharacteristics();
+                        u = &u1; // Присваивание объекту базового класса адреса подкласса
+                        u->showCharacteristics(); // Вызов функции
                         break;
                     case 2:
                         u = &u2;
@@ -62,7 +61,7 @@ int main() {
                 }
                 break;
             case 4:
-               return -1;
+               return 0;
         }
     }
 }
